@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <style>
+div {
+  text-align: justify;
+  text-justify: inter-word;
+}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #35424a;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .profile-img {
+            float: left;
+            width: 200px;
+            margin-right: 20px;
+        }
+        .profile-img img {
+            width: 100%;
+        }
+        .profile-info {
+            float: left;
+            width: 70%;
+        }
+        .about-me {
+            margin-top: 20px;
+        }
+        .portfolio-item {
+            margin: 20px 0;
+            overflow: hidden;
+        }
+        .portfolio-item img {
+            width: 100%;
+        }
+        footer {
+            background-color: #35424a;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+
+
+        /* ... your existing styles ... */
+
+        /* New styles for the horizontal sections */
+        .horizontal-container {
+            display: flex;
+            flex-direction: row;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .horizontal-section {
+            flex: 0 0 auto;
+            width: 25vw;
+            min-height: 15vh;
+            scroll-snap-align: start;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .section-content {
+            text-align: center;
+        }
+
+        .section-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #35424a;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+html, body{
+  height: 100%;
+  font-weight: 800;
+}
+
+body{
+  background: LightYellow;
+font-family: Times New Roman;
+}
+
+svg {
+    display: block;
+    font: 10.5em 'Montserrat';
+    width: 960px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+  stroke: #4D163D;
+  animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+  stroke: #840037;
+  animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+  stroke: #BD0034;
+  animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+  stroke: #BD0034;
+  animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+  stroke: #FDB731;
+  animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+  100% {stroke-dashoffset: -35%;}
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <header style="background-color:SlateBlue;">
+        <h2>Phonebook Management System in Java [Object-oriented programming]</h2>
+        
+    </header>
+    <div class="container">
+       
+        
+</p>
+        </div>
+    </div>
+    <div class="container">
+
+<br>
+
+
+
+
+<h1>Chapter 1</h1>
+<h2>Introduction</h2>
+<h3>1.1 Overview</h3>
+<p>The purpose of this project report is to provide a comprehensive overview of the Phonebook
+Management System, which is developed using Java, Swing, and NetBeans. This system aims
+to simplify the management and organization of contact information within a phonebook.</p>
+<br>
+
+<h3>1.2 Motivation</h3>
+<p>In today’s digital age, managing contacts efficiently is essential for individuals and busi-nesses
+alike. Traditional paper-based phonebooks are becoming obsolete, and there is a need for a
+digital solution that can store, organize, and retrieve contact information easily. The Phonebook
+Management System aims to address this problem by providing a user-friendly application to
+manage contacts effectively.</p>
+<br>
+
+<h2>1.3 Problem Definition</h2>
+<h3>1.3.1 Problem Statement</h3>
+<p>The problem statement identifies the specific challenges and requirements that the Phonebook
+Management System aims to address. In this project, the main problem is the efficient management and organization of contact information within a phonebook without using any database. Traditional phonebooks often lack advanced features and can become cumbersome to maintain.
+The objective is to develop a system that provides a digital solution for contact management and accessibility while using Java, Swing, and NetBeans.</p>
+<br>
+<h3>1.3.2 Complex Engineering Problem</h3>
+<p>Developing a phonebook management system without using a database presents a complex engineering problem. Storing and retrieving contact information efficiently is crucial. In this project, a suitable data storage mechanism needs to be implemented using Java programming language and file handling techniques. The system must handle operations to add, remove, update, delete and view contact lists efficiently without relying on a traditional database. Additionally, ensuring data security and preventing data loss pose additional challenges. The complexity lies in designing an optimal data structure and implementing the necessary algorithms to achieve efficient contact management and organization within the constraints of the chosen technologies.<p>
+<br>
+<h2>1.4 Objectives</h2>
+<p>
+The main objectives of the Phonebook Management System project are as follows:<br><br>
+1. Create a user-friendly interface to input, store, and manage contact information.<br>
+2. Allow users to view contact details quickly.<br>
+3. Enable users to add, update, search and remove contacts as needed.<br>
+4. Provide an intuitive user interface for easy navigation and interaction.<br>
+5. Develop a reliable and efficient system with minimal errors and bugs.<br>
+</p>
+<h2>1.5 Application</h2>
+<p>
+The Phonebook Management System has various applications, including:<br><br>
+1. Personal use: Individuals can utilize the system to efficiently manage their personal
+contacts.<br>
+2. Business use: Organizations can employ the system to maintain a centralized phonebook with contact details of employees, clients, and suppliers.<br>
+3. Customer relationship management (CRM): The system can be integrated into CRM systems to streamline contact management and enhance customer interaction.<br>
+</p>
+<h1>Chapter 2</h1>
+<h1>Implementation of the Project</h1>
+<h2>2.1 Introduction</h2>
+<p>
+The phonebook management system is a Java application that uses Swing for the user interface
+and NetBeans for the development environment. The system is designed to be simple and easy
+to use, while still providing all of the basic features that users would expect from a phonebook
+application.<br>
+<h2>2.2 Project Details</h2>
+The phonebook management system consists of the following modules:<br>
+1. A user interface module that allows users to remove, add, update and view Contact list.<br>
+2. A search module that allows users to search for contacts by name.<br>
+</p>
+
+<!--  <img src="project1.jpg" width="200" height="300" alt="Project 1"> -->
+
+<center>
+<img src="S11.png" width="700" height="300" alt="S11"><br>
+<p>Figure : Front Page</p>
+</center>
+
+<br>
+<h2>2.3 Implementation</h2>
+<p>The implementation of the Phonebook Management System is based on Java programming language, Swing framework, and NetBeans IDE. The implementation includes classes and methods to support the system’s features, such as view Contact list, add, update and remove contacts.</p><br>
+
+<h3>2.3.1 Add Contact</h3>
+
+<center>
+<img src="S12.png" width="700" height="300" alt="S12">
+</center>
+
+<h3>2.3.2 View All Contacts</h3>
+<center>
+<img src="S13.png" width="700" height="300" alt="S13">
+</center>
+
+<h3>2.3.3 Search Contact</h3>
+<center>
+<img src="S14.png" width="700" height="300" alt="S14">
+<img src="S15.png" width="700" height="300" alt="S15">
+</center>
+
+<h3>2.3.4 Update Person</h3>
+<center>
+<img src="S16.png" width="700" height="300" alt="S16">
+<img src="S17.png" width="700" height="300" alt="S17">
+<img src="S18.png" width="700" height="300" alt="S18">
+</center>
+
+<h3>2.3.5 Remove Person<h3>
+<center>
+<img src="S19.png" width="700" height="300" alt="S19">
+<img src="S20.png" width="700" height="300" alt="S20">
+<img src="S21.png" width="700" height="300" alt="S21">
+</center>
+
+
+
+
+<h2>2.4 Algorithm</h2>
+<h3>Algorithm 1: Simple Algorithm for this Phonebook Management System</h3>
+<p>
+1 Initialize an empty phonebook.<br>
+2 Start the phonebook management system.<br>
+3 Repeat the following steps until the user chooses to exit<br>
+4 Display the menu options for the user : 1.Add a contact 2.View All Contacts 3.Search for a person by name 4.Update a person’s information 5.Remove a person by name<br><br>
+5 if If the user chooses to add a contact: then<br><br>
+• Prompt the user to enter the person’s name and phone number and email.<br>
+• Create a new contact object with the provided information<br>
+• Add the contact to the phonebook.<br><br>
+6 if the user chooses to search for a person by name then<br><br>
+• Prompt the user to enter the name of the person to search for<br>
+• Iterate through the contacts in the phonebook:<br>
+• If a contact’s name matches the search name, display the contact’s information.<br>
+if no contact is found then<br>
+Display a message indicating that the person was not found.<br><br>
+7 if the user chooses to update a person’s information: then<br><br>
+• Prompt the user to enter the name of the person to update.<br>
+• Iterate through the contacts in the phonebook:<br>
+if a contact’s name matches the update name then Display enter the new phone number.<br>
+• Update the contact’s phone number.<br>
+• Display a success message.<br>
+if no contact is found then<br>
+Display a message indicating that the person was not found.<br><br>
+8 if the user chooses to remove a person by name then<br><br>
+• Prompt the user to enter the name of the person to remove.<br>
+• Iterate through the contacts in the phonebook<br>
+if a contact’s name matches the remove name then Remove the contact from the phonebook.<br>
+• Display a success message.<br>
+if no contact is found then<br>
+Display a message indicating that the person was not found.<br><br>
+9 End the phonebook management system.<br><br>
+</p>
+
+
+
+<h1>Chapter 3</h1>
+<h1>Performance Evaluation</h1>
+<h2>3.1 Simulation Environment</h2>
+<p>The phonebook management system was tested in NetBeans and Iltetlij Software environment. The environment consisted of a set of test cases that were used to test the functionality of the system.</p><br>
+<h2>3.2 Results Analysis</h2>
+<p>The results of the tested in NetBeans and Iltetlij Software showed that the phonebook management system was able to successfully complete all of the test cases. The system was also able to handle a large number of contacts without any performance issues.</p><br>
+<h2>3.3 Results Overall Discussion</h2>
+<p>The overall results of the compiler showed that the phonebook management system is a reliable and capable application. The system is able to meet the needs of users who need to keep track of a large number of contacts.</p><br>
+
+
+
+
+<h1>Chapter 4</h1>
+<h1>Conclusion</h1>
+<h2>4.1 Discussion</h2>
+<p>The phonebook management system is a simple and easy-to-use application that provides all of the basic features that users would expect from a phonebook application. The system is reliable and capable, and it is able to handle a large number of contacts without any performance issues.</p><br>
+<h2>4.2 Limitations</h2>
+<p>The phonebook management system has a few limitations. The system does not allow users to import or export contacts, and it does not provide any features for managing groups of contacts.</p><br>
+<h2>4.3 Scope of Future Work</h2>
+<p>The following are some of the areas where future work could be done on the phonebook management system:<br><br>
+1. Add the ability to import and export contacts.<br>
+2. Add the ability to manage groups of contacts.<br>
+3. Improve the user interface.<br>
+4. Add Database and improve the user data privacy.<br>
+5. Add additional features, such as the ability to send emails and text messages to contacts.<br>
+</p>
+<h2>References</h2>
+<p>
+[1] T. (2018, February 25). Telephone Directory System Project in Java -  ProjectsGeek. https://projectsgeek.com/2018/02/telephone-directory-systemproject-in-java.html<br>
+[2] NetBeans, A. (n.d.). Welcome to Apache NetBeans. Welcome to Apache NetBeans.
+https://netbeans.apache.org/<br>
+</p>
+
+<br>
+
+
+
+
+   </div>
+    <footer style="background-color:Red;">
+        <marquee>This page was last edited on 20 August 2023</marquee>
+    </footer><br><br>
+
+
+    </div>
+    <footer>
+        <p>&copy; 2023 Riad Muktadir. All rights reserved.</p>
+    </footer>
+  
+</body>
+</html>
