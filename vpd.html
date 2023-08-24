@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title style="color:blue;">German Grade Calculator</title>
+    <style>
+div {
+  text-align: justify;
+  text-justify: inter-word;
+}
+        body {
+            font-family: Times New Roman;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #35424a;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .profile-img {
+            float: left;
+            width: 200px;
+            margin-right: 20px;
+        }
+        .profile-img img {
+            width: 100%;
+        }
+        .profile-info {
+            float: left;
+            width: 70%;
+        }
+        .about-me {
+            margin-top: 20px;
+        }
+        .portfolio-item {
+            margin: 20px 0;
+            overflow: hidden;
+        }
+        .portfolio-item img {
+            width: 100%;
+        }
+        footer {
+            background-color: #35424a;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+             
+
+
+
+
+
+
+   /* ... your existing styles ... */
+
+        /* New styles for the horizontal sections */
+        .horizontal-container {
+            display: flex;
+            flex-direction: row;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .horizontal-section {
+            flex: 0 0 auto;
+            width: 25vw;
+            min-height: 15vh;
+            scroll-snap-align: start;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .section-content {
+            text-align: center;
+        }
+
+        .section-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #35424a;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #35424a;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+
+
+.germangrade {
+  flex: 0 1;
+	//background-color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Times New Roman;
+  }
+
+
+.app2 {
+	width: 480px;
+border: 2px solid #00A7F7;
+      border-radius: 15px;
+	margin: 12px 0;
+	padding: 24px;
+	text-align: center;
+	box-shadow: 2px 2px 8px 2px #aaa;
+	border-radius: 20px;
+  background-color: #fff;
+  font-family: Times New Roman;
+}
+.screen-body-item {
+  flex: 1;
+  padding: 20px;
+  }
+  input {
+	width: 250px;
+	font-size: 16px;
+	padding: 8px;
+	margin: 10px 10px 10px;
+	border-color: #e8e8e8; 
+	border-radius: 20px;
+  font-family: Times New Roman;
+
+  } 
+
+  .showdata {
+	font-size: 26px;
+  font-weight: bold;
+  font-family: Times New Roman;
+	padding: 8px;
+	text-align: center;
+	background: #37CDFC;
+	border: #efefef;
+	border-radius: 10px;
+  color: white;
+  }
+  
+@media (max-width: 767px) { 
+  
+  .app2 {
+    width: 320px;
+    background-color: #fff;
+    margin: 12px;
+    padding: 24px;
+    text-align: center;
+    box-shadow: 2px 2px 8px 2px #aaa;
+    border-radius: 20px;
+    font-family: Times New Roman;
+}
+
+
+}
+.p {
+	font-weight: 500;
+	margin-bottom: 8px;
+  font-family: Times New Roman;
+	text-align: left;
+	font-size: 6px;
+}
+.form-button {
+ background-color: #C0C0C0;
+ color: Black;
+ font-family: Times New Roman;
+}
+
+	
+    </style>
+</head>
+
+
+<body>
+
+
+    <header style="background-color:SlateBlue;">
+        <h1>"German Grade Calculator"</h1>
+    </header>
+
+
+
+<br><br>
+
+
+	<div class="germangrade">
+	<div class="screen-body-item">
+		<div class="app2">
+		<div class="form-group">
+			
+			<label for="hsc">&ensp; Enter your HSC Achived Grade Point:</label>
+          <center>      <input
+			type="number"
+			placeholder="Enter your GPA"
+			id="hsc"
+			>      </center> 
+		</div>
+		
+		<div class="form-group">
+			<label for="cgpa">&ensp; Enter your University Achived Grade Point:</label>
+           <center>     <input
+			type="number"
+			placeholder="Enter your CGPA"
+			id="cgpa"
+			>      </center> 
+		</div>
+		
+		<div class="form-group">
+			<label for="mpg">&ensp; Enter Minimum passing Grade of your University:</label>
+           <center>             <input
+			type="number"
+			placeholder="Enter Minimum Grade"
+			id="mpg"
+			>      </center> 
+		</div>
+		
+		<div>
+	  <center>      <input
+			type="button"
+			value="Convert"
+                        class="form-button"
+			onclick="calculate()"
+			>      </center> 
+		</div>
+
+
+          <p id="result"></p>
+
+
+		</div>
+	     </div>
+          </div>
+
+<br>
+
+    <div class="container">
+
+<br>
+
+
+<h1>VPD Calculator</h1>
+<h2>Convert Current CGPA to German Grade</h2>
+<p>Grades in Germany are based on a linear grading scale from 1.0 to 6.0. The German Grading Calculator or Germany GPA Calculator can convert grades from the traditional A to F United States grading system to the German grading system.<br><br>
+
+Note: This tool use Modified <a href="https://urlis.net/mnbcxevu">Bavarian Formula</a> to convert your Current CGPA to German grade.
+<p><br>
+
+
+
+ </div>
+
+</body>
+
+
+<script>
+	function calculate() {
+		let HSC = parseFloat(document.getElementById("hsc").value);
+		let UNI = parseFloat(document.getElementById("cgpa").value);
+		let MIN = parseFloat(document.getElementById("mpg").value);
+		let HSC1= (5 - HSC) / (5 - 1) * 3+1;
+		let UNI1= (4 - UNI) / (4 - MIN)*3+1;
+		let VPD =(UNI1 + HSC1) / 2;
+		let result = document.getElementById("result");
+
+
+
+		if(VPD <= 1.5) {
+			result.innerHTML = "Your VPD is : " + VPD + "&ensp; Sehr Gut (Very Good)";
+		} else if(VPD <= 2.5 && VPD > 1.5) {
+			result.innerHTML = "Your VPD is : " + VPD + "&ensp; Gut (Good)";
+		} else if(VPD <= 3.5 && VPD > 2.5) {
+			result.innerHTML = "Your VPD is : " + VPD + "&ensp; Befriedigend (Satisfying)";
+            } else if(VPD <= 4.9 && VPD > 3.6) {
+			result.innerHTML = "Your VPD is : " + VPD + "&ensp; Ausreichend (Sufficient)";
+		} else {
+			result.innerHTML = "Nicht ausreichend (Insufficient)";
+		}
+	}
+</script>
+
+
+
+
+<br><br><br><br><br><br>
+
+
+
+   </div>
+    <footer style="background-color:Red;">
+        <marquee>This page was last edited on 20 August 2023</marquee>
+    </footer><br>
+
+
+    </div>
+    <footer>
+        <p>&copy; 2023 Riad Muktadir. All rights reserved.</p>
+    </footer>
+  
+</body>
+</html>
