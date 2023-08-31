@@ -92,64 +92,141 @@ div {
         }
 
 
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
-
-html, body{
-  height: 100%;
-  font-weight: 800;
+/* crops animations that exceeds one line area */
+.line {
+  width: 100%;
+  height: 4rem;
+  overflow: hidden;
+  border: 1px solid black;
+  padding: 0;
+  margin-bottom: 16px;
 }
 
-body{
-  background: LightYellow;
- font-family: Times New Roman;
+/* flipping class and key frames*/
+.flipX {
+  animation: 1s anim-flipX ease infinite;
+}
+@keyframes anim-flipX {
+  0% {
+    opacity: 0;
+    transform: rotateX(90def);
+  }
+  50% {
+    opacity: 1;
+    transform: rotateX(720deg);
+  }
+  100% {
+    /* animate nothing to pause animation at the end */
+    opacity: 1;
+    transform: rotateX(720deg);
+  }
 }
 
-svg {
-    display: block;
-    font: 10.5em 'Montserrat';
-    width: 960px;
-    height: 300px;
-    margin: 0 auto;
+/* lineup class and keyframes */
+.lineUp {
+  animation: 2s anim-lineUp ease-out infinite;
+}
+@keyframes anim-lineUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+/* flipY class and keyframes*/
+.flipY {
+  animation-name: spin, depth;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 6s;
+}
+@keyframes spin {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(-360deg);
+  }
+}
+@keyframes depth {
+  0% {
+    text-shadow: 0 0 black;
+  }
+  25% {
+    text-shadow: 1px 0 black, 2px 0 black, 3px 0 black, 4px 0 black, 5px 0 black;
+  }
+  50% {
+    text-shadow: 0 0 black;
+  }
+  75% {
+    text-shadow: -1px 0 black, -2px 0 black, -3px 0 black, -4px 0 black,
+      -5px 0 black;
+  }
+  100% {
+    text-shadow: 0 0 black;
+  }
 }
 
-.text-copy {
-    fill: none;
-    stroke: white;
-    stroke-dasharray: 6% 29%;
-    stroke-width: 5px;
-    stroke-dashoffset: 0%;
-    animation: stroke-offset 5.5s infinite linear;
+/* subtle zoom to attention and then back */
+.pop-outin {
+  animation: 2s anim-popoutin ease infinite;
 }
 
-.text-copy:nth-child(1){
-  stroke: #4D163D;
-  animation-delay: -1;
+@keyframes anim-popoutin {
+  0% {
+    color: black;
+    transform: scale(0);
+    opacity: 0;
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  25% {
+    color: red;
+    transform: scale(2);
+    opacity: 1;
+    text-shadow: 3px 10px 5px rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    color: black;
+    transform: scale(1);
+    opacity: 1;
+    text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    /* animate nothing to add pause at the end of animation */
+    transform: scale(1);
+    opacity: 1;
+    text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+  }
 }
 
-.text-copy:nth-child(2){
-  stroke: #840037;
-  animation-delay: -2s;
+.fromtop {
+  animation: 2s anim-fromtop linear infinite;
+}
+@keyframes anim-fromtop {
+  0% { opacity: 0; transform: translateY(-100%);}
+  25% { opacity: 1; transform: translateY(0%);}
+  50% {
+  }
+  100% {
+  }
 }
 
-.text-copy:nth-child(3){
-  stroke: #BD0034;
-  animation-delay: -3s;
-}
 
-.text-copy:nth-child(4){
-  stroke: #BD0034;
-  animation-delay: -4s;
-}
-
-.text-copy:nth-child(5){
-  stroke: #FDB731;
-  animation-delay: -5s;
-}
 
 
 @media (max-width: 500px) {
         .body {
-            font-family: Times New Roman;
+            font-family: Arial;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
@@ -222,52 +299,11 @@ width: 100%;
             border-radius: 5px;
         }
 
-svg {
-    display: block;
-    font: 10.5em 'Montserrat';
-    width: 260px;
-    height: 100px;
-    margin: 0 auto;
-}
 
-.text-copy {
-    fill: none;
-    stroke: white;
-    stroke-dasharray: 6% 29%;
-    stroke-width: 5px;
-    stroke-dashoffset: 0%;
-    animation: stroke-offset 5.5s infinite linear;
-}
 
-.text-copy:nth-child(1){
-  stroke: #4D163D;
-  animation-delay: -1;
-}
 
-.text-copy:nth-child(2){
-  stroke: #840037;
-  animation-delay: -2s;
-}
 
-.text-copy:nth-child(3){
-  stroke: #BD0034;
-  animation-delay: -3s;
-}
 
-.text-copy:nth-child(4){
-  stroke: #BD0034;
-  animation-delay: -4s;
-}
-
-.text-copy:nth-child(5){
-  stroke: #FDB731;
-  animation-delay: -5s;
-}
-
-        
-@keyframes stroke-offset{
-  100% {stroke-dashoffset: -35%;}
-}
 
 
 
@@ -349,28 +385,18 @@ svg {
 
 
 
+<br>
 
 
-
-<svg viewBox="0 0 960 300">
-  <symbol id="s-text">
-    <text text-anchor="middle" x="50%" y="80%">The Latest. </text>
-    <text text-anchor="middle" x="52%" y="80%">The Latest. </text>
-    
-  </symbol>
-
-  <g class = "g-ants">
-    <use xlink:href="#s-text" class="text-copy"></use>
-    <use xlink:href="#s-text" class="text-copy"></use>
-    <use xlink:href="#s-text" class="text-copy"></use>
-    <use xlink:href="#s-text" class="text-copy"></use>
-    <use xlink:href="#s-text" class="text-copy"></use>
-  </g>
-</svg>
-
-
-
-
+<body>
+ 
+  <div class='line'>
+<center> 
+    <h2 class='pop-outin'>Most Recent</h2>
+</center> 
+  </div>
+ 
+</body>
 
 
 <header style="background-color:Purple;">
@@ -387,7 +413,7 @@ svg {
 
    <b> Contact Storage &emsp;&nbsp;&nbsp;:</b> The system allows users to input and store essential contact information, such as names, phone numbers, email addresses, and other relevant details.<br>
 
-   <b>User Interface &emsp;&emsp;&nbsp;: </b> The system offers an intuitive user interface that enables users to easily navigate and interact with the various functions of the phonebook.<br>
+   <b>User Interface &nbsp;&emsp;&emsp;&nbsp;: </b> The system offers an intuitive user interface that enables users to easily navigate and interact with the various functions of the phonebook.<br>
 
 
    <b>Contact Update &emsp; &nbsp;    : </b> The system permits users to modify existing contact details, ensuring that the information remains up-to-date.<br>
@@ -395,9 +421,9 @@ svg {
    <b>Contact Deletion &emsp; : </b> Users can remove outdated or unnecessary contacts from the phonebook.<br>
 
 
-   <b>File Handling  &ensp; &emsp;  &nbsp; : </b> The system employs file handling techniques to store contact information persistently, allowing users to access their contacts across multiple sessions.<br>
+   <b>File Handling   &ensp;&nbsp; &emsp;  &nbsp; : </b> The system employs file handling techniques to store contact information persistently, allowing users to access their contacts across multiple sessions.<br>
 
-   <b>Sorting  &emsp;&emsp;&emsp;  &ensp;   &emsp;      : </b> Contacts can be sorted alphabetically or based on other criteria for easy organization and retrieval.<br>
+  <b>Sorting  &emsp; &emsp; &emsp; &ensp; &emsp;: </b> Contacts can be sorted alphabetically or based on other criteria for easy organization and retrieval.<br>
 
    
 
