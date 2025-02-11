@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: #ffffff;
+            color: #121212;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Styles */
+        .navbar {
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f0f0f0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo img {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #4CAF50;
+        }
+
+        .logo span {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-links a {
+            color: #121212;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background: rgba(76, 175, 80, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .social-icons a {
+            color: #121212;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #4CAF50;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section Styles */
+        .hero {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            padding: 0 5%;
+            margin-top: 80px;
+            text-align: left;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding-left: 180px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #4CAF50, #8BC34A);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+
+        .intro-text {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            text-align: justify;
+            line-height: 1.8;
+            max-width: 600px;
+        }
+
+        .cta-button {
+            padding: 1rem 2rem;
+            background: #4CAF50;
+            border: none;
+            border-radius: 30px;
+            color: #fff;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            background: #45a049;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: #f0f0f0;
+            padding: 2rem;
+            text-align: left;
+            margin-top: auto;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding-left: 180px;
+            line-height: 1.6;
+        }
+
+        .footer-content p {
+            margin: 0.5rem 0;
+            color: #555;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 0.5rem;
+            }
+
+            .nav-links a {
+                padding: 0.6rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+
+            .hero-content,
+            .footer-content {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .social-icons {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero h2 {
+                font-size: 1.2rem;
+            }
+
+            .intro-text {
+                font-size: 1rem;
+            }
+
+            .cta-button {
+                padding: 0.8rem 1.5rem;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="itsmef.jpg" alt="Logo">
+            <span>Fahmida Akter</span>
+        </div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#case-studies">Case Studies</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#work">Recent Work</a>
+            <a href="#contact">Get In Touch</a>
+        </div>
+        <div class="social-icons">
+            <a href="https://facebook.com/yourprofile" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content" style="display: flex; justify-content: flex-start; flex-direction: column; align-items: flex-start; line-height: 0.2;">
+            
+            <h2>MST Fahmida Akter</h2>
+            <p class="intro-text">A highly motivated and academically accomplished individual with a strong foundation in Science. Passionate about pursuing higher education and achieving professional excellence to fulfill my dreams of becoming a successful entrepreneur. Seeking opportunities to grow, learn, and contribute to meaningful projects.</p>
+            <button class="cta-button">Let's get started</button>
+        </div>
+    </section>
+
+        <footer>
+        <div class="footer-content" style="display: flex; justify-content: flex-start; flex-direction: column; align-items: flex-start; padding-left: 220px; line-height: 0.5;">            <p>MST Fahmida Akter</p>
+            <p>Phone : +880 1234567899</p>
+            <p>Email : your.email@example.com</p>
+            <p>Address : 123 Main Street, City, Country</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
